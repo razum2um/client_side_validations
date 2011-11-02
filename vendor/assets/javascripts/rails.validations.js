@@ -17,8 +17,8 @@
       form
         .submit(                      function ()          {
           valid = form.isValid(settings.validators); // set submit claaback runtime, too!
-          if (typeof(ClientSideValidations.callbacks.submit) == 'function') {
-            callback = ClientSideValidations.callbacks.submit.call(form, valid)
+          if (typeof(clientSideValidations.callbacks.submit) == 'function') {
+            callback = clientSideValidations.callbacks.submit.call(form, valid)
             return callback();
           } else {
             return valid;
